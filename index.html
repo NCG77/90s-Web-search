@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuppie - Vintage CRT Monitor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <audio id="background-sound" src="assets/nightcall_kavinsky.mp3" preload="auto"></audio>
+
+    <div class="monitor">
+        <div class="screen">
+            <div id="channel-display" class="channel-display">CH1</div>
+
+            <div id="channel-1" class="content hidden">
+                <h1 id="logo">YUPPIE.COM</h1>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search the Web..." autocomplete="off">
+                    <button id="search-button">Search</button>
+                </div>
+                <div id="search-results" class="search-results hidden"></div>
+            </div>
+
+            <video id="static-video" class="content hidden" autoplay loop muted>
+                <source src="assets/tv_1.mov" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="controls">
+            <button id="power-button" class="icon-button">
+                <i class="fas fa-power-off"></i>
+            </button>
+            <button id="channel-button" class="icon-button">
+                <i class="fas fa-forward"></i>
+            </button>
+            <button id="mute-button" class="icon-button">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+        </div>
+    </div>
+
+    <audio id="static-sound" src="assets/tv-static-7019.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

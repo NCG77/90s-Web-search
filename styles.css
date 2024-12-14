@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Noto Sans Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/NotoSansDisplay-Regular.ttf);
+}
+
+body {
+    overflow: hidden;
+    background-color: #111;
+    font-family: 'Noto Sans Display', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 1em;
+    color: #eee;
+    font-size: 1em;
+    line-height: 1;
+    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    letter-spacing: 0.125em;
+    animation-duration: 0.01s;
+    animation-name: textflicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin: 0;
+    padding: 0;
+    background: url('https://media.giphy.com/media/9ZsHm0z5QwSYpV7g01/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.monitor {
+    width: 85%;
+    max-width: 800px;
+    height: 75%;
+    background: #c4b499;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: inset -5px -5px 20px rgba(0, 0, 0, 0.8), inset 10px 15px 40px #a3947a;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #a6947a;
+    position: relative;
+    z-index: 1;
+}
+
+.screen {
+    width: 90%;
+    height: 70%;
+    background: #ffffff;
+    border-radius: 15px;
+    border: 10px solid #3b2a20;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#static-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#logo {
+    font-size: 48px;
+    color: #ff6600;
+    text-shadow: 4px 4px 0 #222;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #33ff33;
+    font-family: 'Noto Sans Display', Courier, monospace;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #33ff33;
+    border: none;
+    color: #111;
+    align-self: center;
+    font-family: 'Noto Sans Display', Courier, monospace;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search-results {
+    color: #222;
+    font-size: 14px;
+    padding: 10px;
+    max-height: 100%;
+    overflow-y: auto;
+    background: #f5f5dc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.result-item {
+    margin-bottom: 10px;
+}
+
+.result-item a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 15%;
+    transform: translateX(-50%);
+}
+
+.icon-button {
+    background-color: #3b2a20;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-button i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+}
+
+@keyframes textflicker {
+    from {
+        text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+
+    to {
+        text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+}
