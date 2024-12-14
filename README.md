@@ -24,7 +24,7 @@ A nostalgic and interactive web project that simulates a vintage CRT monitor int
 
 ## Demo
 
-A working demo of the project is available here:
+A working demo of the project is available here: https://ncg77.github.io/90s-Web-search/
 
 
 ## Usage
